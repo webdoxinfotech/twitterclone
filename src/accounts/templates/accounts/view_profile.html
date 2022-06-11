@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+
+{% block title %}Register | {{ block.super }}{% endblock title %}
+
+
+{% block content %}
+<div class='row'>
+    <div class='col-sm-6 col-sm-offset-3'>
+        <h1>View Profile</h1>
+            <table class="table">
+              <tr>
+                <th>First Name</th>
+                <td>{{ user.first_name|title }}</td>
+              </tr>
+
+              <tr>
+                <th>Last Name</th>
+                <td>{{ user.last_name|title }}</td>
+              </tr>
+              <tr>
+                <th>Email</th>
+                <td>{{ user.email }}</td>
+              </tr>
+              <tr>
+                <th>Username</th>
+                <td>{{ user.username }}</td>
+              </tr>
+
+              <tr>
+                <th>Image</th>
+                <td><img src="{{ user.profile.image.url }}" width="30%"></td>
+              </tr>
+
+
+            </table>
+        </form>
+    </div>
+</div>
+{% endblock content %}
+
+
+
